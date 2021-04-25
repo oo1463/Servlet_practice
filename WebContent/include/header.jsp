@@ -41,6 +41,12 @@ table td, table th{
 			<input type="submit" value="login">
 		</form>
 	</c:if>
+	
+	<c:if test="${empty loginUser }">
+		<form method="post" action="${root }/main">
+			<a href="${root }/main?act=list">도서 목록</a>
+		</form>
+	</c:if>
 
 
 </div>
