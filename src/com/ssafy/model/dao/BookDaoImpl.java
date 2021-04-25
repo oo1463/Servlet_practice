@@ -24,7 +24,7 @@ public class BookDaoImpl implements BookDao {
 		ps.setString(2, product.getTitle());
 		ps.setString(3, product.getAuthor());
 		ps.setInt(4, product.getPrice());
-		ps.executeQuery();
+		ps.executeUpdate();
 		
 		dbUtil.close(conn, ps);
 	}
